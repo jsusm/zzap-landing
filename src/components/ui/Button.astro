@@ -4,17 +4,31 @@ import { twMerge } from "tailwind-merge";
 
 interface Props extends HTMLAttributes<"button"> {
   variant?: keyof typeof variants;
+  size?: keyof typeof sizes;
 }
 
-const { class: className = "", variant = 'default', ...rest } = Astro.props;
+const {
+  class: className = "",
+  variant = "default",
+  size = "base",
+  ...rest
+} = Astro.props;
 const baseStyles =
-  "inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium";
+  "inline-flex items-center justify-center rounded-lg font-medium h-9 text-sm";
 const variants = {
   ghost: "bg-transparent hover:bg-gray-100 active:bg-gray-200",
-  default: 'border border-gray-300 bg-gray-50 hover:bg-gray-100 active:bg-gray-200',
+  default:
+    "border border-gray-300 bg-gray-50 hover:bg-gray-100 active:bg-gray-200",
+};
+const sizes = {
+  base: "px-4 py-2 text-sm h-9",
+  lg: "px-4 py-2 sm:text-base sm:h-11",
 };
 ---
 
-<button class={twMerge(baseStyles, variants[variant], className)} {...rest}>
+<button
+  class={twMerge(baseStyles, variants[variant], sizes[size], className)}
+  {...rest}
+>
   <slot />
 </button>

@@ -1,19 +1,30 @@
 ---
-import { Icon } from 'astro-icon/components'
-import Button from '../components/ui/Button.astro'
+import { Icon } from "astro-icon/components";
+import Button from "../components/ui/Button.astro";
 ---
+
 <header>
-  <div class="flex justify-between py-6 px-6 container mx-auto items-center">
+  <div class="container mx-auto flex items-center justify-between px-6 py-6">
     <div>
       <div class="flex items-center">
-        <Icon name="tabler:bolt" size={28} class="text-blue-600"/>
-        <p class="font-medium text-lg">zzap</p>
+        <Icon name="tabler:bolt" size={28} class="text-blue-600" />
+        <p class="text-lg font-medium">zzap</p>
       </div>
     </div>
     <div class="flex gap-x-3">
-      <Button class="px-0 py-0 w-11 text-gray-600" variant='ghost'><Icon name="tabler:sun-low" class="w-6 h-6" /></Button>
-      <Button class="bg-gray-950 border-blue-100 text-white hover:bg-blue-600 active:bg-blue-700 text-base transition-colors h-11">Sign up</Button>
-      <Button class="text-base">Sign in</Button>
+      <Button
+        class="h-9 w-9 px-0 py-0 text-gray-600 sm:h-11 sm:w-11"
+        variant="ghost"
+      >
+        <Icon name="tabler:sun-low" class="h-6 w-6" />
+      </Button>
+      <Button
+        class="border-blue-100 bg-gray-950 text-white transition-colors hover:bg-blue-600 active:bg-blue-700"
+        size="lg"
+      >
+        Sign up
+      </Button>
+      <Button size="lg">Sign in</Button>
     </div>
   </div>
 </header>
