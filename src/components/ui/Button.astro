@@ -13,13 +13,17 @@ const {
   size = "base",
   ...rest
 } = Astro.props;
+
 const baseStyles =
-  "inline-flex items-center justify-center rounded-lg font-medium h-9 text-sm";
+  "inline-flex items-center justify-center rounded-lg font-medium h-9 text-sm dark:text-white";
+
 const variants = {
-  ghost: "bg-transparent hover:bg-gray-100 active:bg-gray-200",
+  ghost:
+    "bg-transparent hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-800",
   default:
-    "border border-gray-300 bg-gray-50 hover:bg-gray-100 active:bg-gray-200",
+    "border border-gray-300 bg-gray-50 dark:bg-gray-950 dark:border-gray-800 dark:hover:bg-gray-800 hover:bg-gray-100 active:bg-gray-200",
 };
+
 const sizes = {
   base: "px-4 py-2 text-sm h-9",
   lg: "px-4 py-2 sm:text-base sm:h-11",

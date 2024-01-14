@@ -1,5 +1,6 @@
 ---
 import CustomStyles from "../components/CustomStyles.astro";
+import Theme from "../scripts/Theme.astro";
 
 interface Props {
   title: string;
@@ -19,7 +20,8 @@ const { title } = Astro.props;
     <CustomStyles />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="min-h-screen dark:bg-gray-950 dark:text-gray-100">
     <slot />
+    <Theme />
   </body>
 </html>
