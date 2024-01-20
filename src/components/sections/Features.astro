@@ -1,14 +1,19 @@
 ---
-import { Icon } from "astro-icon/components";
+import type { itemGrid } from "../../types";
 import Headline from "../ui/Headline.astro";
 import ItemGrid from "../ui/ItemGrid.astro";
+
+interface Props {
+  features: itemGrid[];
+  title: string;
+  subtitle: string;
+}
+
+const { features, title, subtitle } = Astro.props;
 ---
 
 <section class="mt-10 py-10 md:py-16">
-  <Headline
-    title="Unlock the voltage"
-    subtitle="This is what we offer to you, you can take it or make a bad desition."
-  />
+  <Headline title="Unlock the voltage" subtitle="" />
   <div class="relative mx-auto max-w-6xl px-8 md:px-8">
     <div class="grid gap-16 md:grid-cols-2">
       <ItemGrid
