@@ -8,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('title'),
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("title"),
   classes = {},
 } = Astro.props;
 
@@ -19,17 +19,33 @@ const {
   subtitle: subtitleClass = "text-xl",
 } = classes;
 ---
+
 {
   (title || subtitle) && (
-  <div class={twMerge('mb-8 md:mx-auto md:mb-12 px-8 text-center', containerClass)}>
+    <div
+      class={twMerge(
+        "mb-8 px-8 text-center md:mx-auto md:mb-12",
+        containerClass,
+      )}
+    >
       {title && (
-        <h2 class={twMerge('text-2xl font-bold tracking-tight leading-4 text-gray-800 dark:text-gray-200', titleClass)} set:html={title} />
+        <h2
+          class={twMerge(
+            "text-2xl font-bold leading-4 tracking-tight text-gray-800 dark:text-gray-200",
+            titleClass,
+          )}
+          set:html={title}
+        />
       )}
       {subtitle && (
-        <p class={twMerge('text-gray-600 dark:text-gray-400 mt-4', subtitleClass)} set:html={subtitle} />
+        <p
+          class={twMerge(
+            "mt-4 text-gray-600 dark:text-gray-400",
+            subtitleClass,
+          )}
+          set:html={subtitle}
+        />
       )}
-  </div>
+    </div>
   )
 }
-
-

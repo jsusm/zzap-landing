@@ -20,6 +20,35 @@ import Features from "../components/sections/Features.astro";
         <Button size="xl">Documentation</Button>
       </Fragment>
     </Hero>
-    <Features />
+    <Features
+      title="Unlock the voltage"
+      subtitle="This is what we offer to you, you can take it or make a bad desition."
+      features={[
+        {
+          title: "Blazing Fast Deployment:",
+          content:
+            " Experience instant launches, parallel processing, and automated CD pipelines that propel your apps to life in record time. Say goodbye to deployment lag and hello to lightning-fast updates. ",
+          iconName: "tabler:speedboat",
+        },
+        {
+          title: "Clicks or CLI:",
+          content:
+            "Take your pick – deploy with effortless drag-and-drop simplicity in our intuitive interface or unleash the power of our feature-rich CLI for granular control. Zzap flexes to fit your workflow, whether you’re a visual creator or a command-line wizard.",
+          iconName: "tabler:mouse-2",
+        },
+        {
+          title: "Configuration as Code:",
+          content:
+            "Craft your infrastructure like poetry using declarative languages, embrace version control for seamless collaboration and rollbacks, and ensure repeatable, scalable deployments with predictable results. Zzap makes infrastructure management a symphony of efficiency.",
+          iconName: "tabler:code",
+        },
+        {
+          title: "Docker Friendly:",
+          content:
+            "Enjoy seamless Docker image integration, effortless multi-container orchestration, and simplified microservices management. Zzap welcomes your Docker creations with open arms, making container deployment a breeze.",
+          iconName: "tabler:brand-docker",
+        },
+      ]}
+    />
   </main>
 </Layout>
