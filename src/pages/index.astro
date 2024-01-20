@@ -1,11 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Hero from "../components/sections/Hero.astro";
+import Button from "../components/ui/Button.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
-  <main class="grid min-h-screen place-items-center">
-    <h1 class="text-5xl font-bold tracking-tight">zzaap</h1>
+  <main>
+    <Hero
+      subtitle="Unleash the speed of your ideas. Deploy apps in a flash with Zzap's effortless setup, powerful CLI, and code-driven configuration."
+    >
+      <Fragment slot="title">
+        Deploy <span class="underline decoration-blue-600">Faster</span> Than Lightning
+      </Fragment>
+      <Fragment slot="actions">
+        <Button size="xl" variant="primary">Get started</Button>
+        <Button size="xl">Documentation</Button>
+      </Fragment>
+    </Hero>
   </main>
 </Layout>

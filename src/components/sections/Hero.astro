@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import HeroImg from "../../assets/images/1.jpg";
+import Button from "../ui/Button.astro";
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
+} = Astro.props;
+---
+
+<section>
+  <div class="relative mx-auto max-w-7xl px-4 md:px-8">
+    <div class="py-16 lg:flex lg:justify-center lg:gap-12">
+      <div class="basis-1/2 pb-10 text-center lg:py-10 lg:text-left">
+        {
+          title && (
+            <h1
+              class="mb-4 text-5xl font-bold tracking-tight md:text-6xl"
+              set:html={title}
+            />
+          )
+        }
+        {
+          subtitle && (
+            <p
+              class="mb-8 text-xl font-medium text-gray-600 dark:text-gray-400"
+              set:html={subtitle}
+            />
+          )
+        }
+        <div
+          class="flex flex-col gap-4 md:flex-row md:justify-center lg:justify-start"
+        >
+          <slot name="actions" />
+        </div>
+      </div>
+      <div>
+        <Image
+          class="mx-auto rounded-xl shadow-xl dark:shadow-gray-900"
+          width={600}
+          height={600}
+          alt="Zaap"
+          src={HeroImg}
+        />
+      </div>
+    </div>
+  </div>
+</section>
