@@ -4,11 +4,12 @@ import Header from "../components/Header.astro";
 import Hero from "../components/sections/Hero.astro";
 import Button from "../components/ui/Button.astro";
 import Features from "../components/sections/Features.astro";
+import Slogan from "../components/sections/Slogan.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
-  <main>
+  <main class="mb-96">
     <Hero
       subtitle="Unleash the speed of your ideas. Deploy apps in a flash with Zzap's effortless setup, powerful CLI, and code-driven configuration."
     >
@@ -50,5 +51,6 @@ import Features from "../components/sections/Features.astro";
         },
       ]}
     />
+    <Slogan />
   </main>
 </Layout>

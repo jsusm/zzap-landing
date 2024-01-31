@@ -16,9 +16,7 @@ const { features, title, subtitle } = Astro.props;
   <Headline title={title} subtitle={subtitle} />
   <div class="relative mx-auto max-w-6xl px-8 md:px-8">
     <div class="grid gap-16 md:grid-cols-2">
-      {features.map(f => (
-        <ItemGrid {...f} />
-      ))}
+      {features.map((f) => <ItemGrid {...f} />)}
     </div>
   </div>
 </section>
