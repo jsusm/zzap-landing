@@ -1,0 +1,31 @@
+---
+import Headline from "../ui/Headline.astro";
+import BlogEntry from "../ui/BlogEntry.astro";
+---
+
+<section class="container mx-auto my-32 px-8">
+  <Headline
+    title="Don't know where to start?"
+    subtitle="Check out our guides to integrate with your faborite stack"
+  />
+  <div class="grid justify-items-center gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <BlogEntry
+      src="https://images.unsplash.com/photo-1667730874046-6d7dfc97242c?q=80&w=470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      href="/"
+      title="Zapping your Next.js Project to Glory"
+      description="Unleash the power of Next.js and Zzap! This guide reveals how to effortlessly deploy your Next.js app in minutes, from setup to live launch."
+    />
+    <BlogEntry
+      src="https://images.unsplash.com/photo-1605137512216-3e420479089d?q=80&w=636&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      href="/"
+      title="Deploying Backends with Zzap's Lightning Speed"
+      description="This article shines a light on deploying your Node.js backend with Zzap's unparalleled speed and flexibility. Master environment variables, scaling configurations, and continuous integration/delivery pipelines"
+    />
+    <BlogEntry
+      src="https://images.unsplash.com/photo-1636884102130-05413357adbf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGhpZ2glMjB2b2x0YWdlJTIwbGluZXxlbnwwfHwwfHx8MA%3D%3D"
+      href="/"
+      title="Deploying Static Sites with Ease"
+      description="Tired of clunky hosting platforms? Discover the joy of deploying your static website with Zzap's intuitive interface and lightning-fast deployments. This guide walks you through setting up custom domains, caching strategies, and managing redirects. "
+    />
+  </div>
+</section>
