@@ -8,3 +8,8 @@ export type AccordionItem = {
   title: string;
   desc: string;
 };
+
+export type Link = {
+  text: string;
+  href: string;
+};

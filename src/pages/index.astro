@@ -7,6 +7,7 @@ import Features from "../components/sections/Features.astro";
 import Slogan from "../components/sections/Slogan.astro";
 import BlogLatestPosts from "../components/sections/BlogLatestPosts.astro";
 import FAQ from "../components/sections/FAQ.astro";
+import Footer from "../components/sections/Footer.astro";
 import type { AccordionItem } from "../types";
 
 const faq: AccordionItem[] = [
@@ -47,7 +48,7 @@ const faq: AccordionItem[] = [
 
 <Layout title="Welcome to Astro.">
   <Header />
-  <main class="mb-96">
+  <main>
     <Hero
       subtitle="Unleash the speed of your ideas. Deploy apps in a flash with Zzap's effortless setup, powerful CLI, and code-driven configuration."
     >
@@ -93,4 +94,108 @@ const faq: AccordionItem[] = [
     <BlogLatestPosts />
     <FAQ items={faq} />
   </main>
+  <Footer
+    links={[
+      {
+        title: "Product",
+        links: [
+          {
+            text: "features",
+            href: "#",
+          },
+          {
+            text: "Security",
+            href: "#",
+          },
+          {
+            text: "Team",
+            href: "#",
+          },
+          {
+            text: "Enterprice",
+            href: "#",
+          },
+          {
+            text: "Pricing",
+            href: "#",
+          },
+        ],
+      },
+      {
+        title: "Platform",
+        links: [
+          {
+            text: "Developer API",
+            href: "#",
+          },
+          {
+            text: "Electron",
+            href: "#",
+          },
+          {
+            text: "Zaap desktop",
+            href: "#",
+          },
+          {
+            text: "Partners",
+            href: "#",
+          },
+        ],
+      },
+      {
+        title: "Support",
+        links: [
+          {
+            text: "Docs",
+            href: "#",
+          },
+          {
+            text: "Comunity Forum",
+            href: "#",
+          },
+          {
+            text: "Status",
+            href: "#",
+          },
+          {
+            text: "Skills",
+            href: "#",
+          },
+          {
+            text: "Professional Services",
+            href: "#",
+          },
+        ],
+      },
+      {
+        title: "Company",
+        links: [
+          {
+            text: "About",
+            href: "#",
+          },
+          {
+            text: "Blog",
+            href: "#",
+          },
+          {
+            text: "Careers",
+            href: "#",
+          },
+          {
+            text: "Press",
+            href: "#",
+          },
+          {
+            text: "Inclusion",
+            href: "#",
+          },
+          {
+            text: "Social Inpact",
+            href: "#",
+          },
+        ],
+      },
+    ]}
+  />
 </Layout>

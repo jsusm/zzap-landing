@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+import type { Link } from "../../types";
+
+interface Links {
+  title: string;
+  links: Link[];
+}
+
+interface Props {
+  links: Links[];
+}
+
+const { links } = Astro.props;
+---
+
+<footer class="container mx-auto mb-20 mt-32 px-8">
+  <div class="flex flex-col md:flex-row md:justify-between">
+    <div class="mb-8 flex">
+      <Icon name="tabler:bolt" size={28} class="text-blue-600" />
+      <p class="text-lg font-medium">zzap</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      {
+        links.map((links) => (
+          <div class="flex flex-col gap-1.5">
+            <p class="font-medium">{links.title}</p>
+            {links.links.map((l) => (
+              <a
+                class="text-sm text-gray-600 hover:underline dark:text-gray-400"
+                href={l.href}
+              >
+                {l.text}
+              </a>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <p class="mt-8 text-sm text-gray-600 dark:text-gray-400">
+    Create by <a href="https://github.com/jsusm/" class="underline"
+      >Jsus Marcano</a>
+  </p>
+</footer>
