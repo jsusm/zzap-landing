@@ -1,0 +1,19 @@
+---
+import Headline from "../ui/Headline.astro";
+import Accordion from "../ui/Accordion.astro";
+import type { AccordionItem } from "../../types";
+
+interface Props {
+  items: AccordionItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="container mx-auto">
+  <Headline
+    title="FAQs 🤔"
+    subtitle="Dive into the following questions to gain insights into the powerful features that Zzap offers and how it can elevate your web development journey."
+  />
+  <Accordion items={items} />
+</section>

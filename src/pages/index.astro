@@ -6,6 +6,43 @@ import Button from "../components/ui/Button.astro";
 import Features from "../components/sections/Features.astro";
 import Slogan from "../components/sections/Slogan.astro";
 import BlogLatestPosts from "../components/sections/BlogLatestPosts.astro";
+import FAQ from "../components/sections/FAQ.astro";
+import type { AccordionItem } from "../types";
+
+const faq: AccordionItem[] = [
+  {
+    title: "What makes Zzap different from other deployment platforms?",
+    desc: "Zzap prioritizes speed, flexibility, and control. We offer instant deployments via our intuitive interface or powerful CLI, support a wide range of languages and frameworks, and let you manage infrastructure through code-driven configuration. Think of us as a launchpad, not just a deployment platform.",
+  },
+  {
+    title: "How fast is Zzap actually?",
+    desc: "Zzap is blazing fast! We've streamlined the deployment process, allowing you to get your apps live in minutes, not hours. Imagine the productivity boost when you're not waiting around for deployments!",
+  },
+  {
+    title: "Do I need coding experience to use Zzap?",
+    desc: "Absolutely not! Our user-friendly interface makes deployment accessible to everyone, regardless of technical expertise. But for power users, our CLI offers granular control and endless customization.",
+  },
+  {
+    title: "What languages and frameworks does Zzap support?",
+    desc: "We play nice with a wide range of languages and frameworks, including Ruby, Python, Java, Node.js, and many more. Check out our website for a comprehensive list.",
+  },
+  {
+    title: "Can I deploy Docker images with Zzap?",
+    desc: "You bet! Docker integration is seamless with Zzap. Simply push your Docker image to your preferred registry and deploy it directly.",
+  },
+  {
+    title: "How do I manage my infrastructure with Zzap?",
+    desc: " Zzap embraces the power of configuration as code. Simply define your infrastructure needs in code, and Zzap handles the rest. This ensures consistency, maintainability, and easy collaboration.",
+  },
+  {
+    title: "What are the pricing options for Zzap?",
+    desc: "We offer flexible pricing plans to suit your needs. Explore our website to find the perfect plan for your team or project. We also offer a generous free trial so you can experience the magic of Zzap firsthand.",
+  },
+  {
+    title: "Where can I get started with Zzap?",
+    desc: "It's easy! Head over to our website, sign up for a free trial, and experience the thrill of lightning-fast deployments. We have detailed documentation and a friendly support team to guide you every step of the way.",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro.">
@@ -54,5 +91,6 @@ import BlogLatestPosts from "../components/sections/BlogLatestPosts.astro";
     />
     <Slogan />
     <BlogLatestPosts />
+    <FAQ items={faq} />
   </main>
 </Layout>
