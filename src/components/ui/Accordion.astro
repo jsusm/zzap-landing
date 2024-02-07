@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+import type { AccordionItem } from "../../types";
+interface Props {
+  items: AccordionItem[];
+}
+const { items } = Astro.props;
+---
+
+<script src="../../scripts/accordion.ts"></script>
+<div class="accordion mx-auto max-w-screen-md px-8">
+  {
+    items.map((i) => (
+      <details class="group group border-b-gray-300 text-gray-600 dark:text-gray-400">
+        <summary class="cursor-pointer list-none py-5 text-lg font-medium text-gray-800 hover:text-blue-900 group-open:text-blue-700 dark:text-gray-200 dark:hover:text-blue-200 dark:group-open:text-blue-400 md:text-xl">
+          <Icon
+            name="tabler:chevron-right"
+            class="inline transition-transform group-open:rotate-90"
+          />{" "}
+          {i.title}
+        </summary>
+        <p class="pb-3 md:pl-7">{i.desc}</p>
+      </details>
+    ))
+  }
+</div>
